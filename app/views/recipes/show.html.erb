@@ -1,5 +1,7 @@
 <h1>Recipe</h1>
 
+<%= image_tag @recipe.image.url(:medium), class: "recipe_image" %>
+<br>
 <%= @recipe.title %>
 <br>
 <%= @recipe.description %>
