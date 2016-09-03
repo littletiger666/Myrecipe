@@ -1,1 +1,13 @@
-<h1>yoyoyo!</h1>
+<% @recipe.each_slice(3) do |recipes| %>
+  <row>
+    <% recipes.each do |recipe| %>
+      <div class="col-md-4">
+        <div class="recipe">
+          <div class="image_wrapper">
+            <h2><%= link_to recipe.title, recipe %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </row>
+<% end %>
